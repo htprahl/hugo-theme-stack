@@ -54,7 +54,7 @@ html[data-scheme="dark"] {
 /* 1. Eigene Schriften definieren */
 @font-face {
     font-family: 'Spectral';
-    src: url('/fonts/spectral-regular.woff2') format('woff2');
+    src: url('/fonts/spectral/spectral-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap; /* Verhindert unsichtbaren Text beim Laden */
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6, {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); 
+    src: url('/fonts/playfair-display/playfair-display-v40-latin-regular.woff2') format('woff2'); 
   }
 
   /* playfair-regular - latin */
