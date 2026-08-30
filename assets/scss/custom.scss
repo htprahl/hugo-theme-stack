@@ -1,1 +1,123 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+
+/* Helles Design (Light Mode) */
+:root {
+    --body-background: #f5f6fa;       /* Hintergrund der Website */
+    --card-background: #ffffff;       /* Hintergrund der Inhalts-Karten */
+    --text-color-main: #2c3e50;       /* Haupttext */
+    --text-color-sidebar: #5f27cd;    /* Textfarbe in der Sidebar */
+    --accent-color: #8D2838;          /* Primäre Akzentfarbe (Links, Buttons) */
+    --accent-color-darker: #1a0b5a;   /* Dunklere Akzentfarbe für Hover-Effekte */
+}
+
+/* Dunkles Design (Dark Mode) */
+html[data-scheme="dark"] {
+    --body-background: #1e272e;       /* Dunkler Hintergrund */
+    --card-background: #2f3542;       /* Dunkle Karten */
+    --text-color-main: #f1f2f6;       /* Heller Text auf dunklem Grund */
+    --accent-color: #ffa502;          /* Akzentfarbe im Dark Mode */
+    --accent-color-darker: #ff7f50;   /* Hover-Akzentfarbe im Dark Mode */
+    --article-category: #ffffff; 
+}
+
+/* Das einzelne Kategorie-Kästchen stylen */
+.article-category a {
+    background-color: #8D2838 !important;/* Hintergrundfarbe des Kästchens */
+    color: #fff !important;
+   /* border-radius: 4px;        /* Abrundung der Ecken */
+   /* padding: 4px 10px;         /* Innenabstand (oben/unten links/rechts) */
+   /* font-size: 1.2rem;         /* Schriftgröße */
+   /* text-transform: uppercase; /* Text in Großbuchstaben (optional) */
+    transition: background-color 0.3s ease; /* Weicher Übergang beim Hovern */
+
+    /* Verhalten, wenn man mit der Maus darüber fährt */
+    &:hover {
+        background-color: #b92929; /* Dunkleres Blau beim Hovern */
+        color: #ffffff;
+    }
+}
+
+/* Spezifische Anpassung für den Dark Mode (falls gewünscht) */
+html[data-scheme="dark"] {
+    .article-category a {
+        background-color: #A68BFA !important;
+        color: #f5f6fa;
+        
+        &:hover {
+            background-color: #353b48;
+        }
+    }
+}
+
+/* eigene Schriftarten */ 
+
+/* 1. Eigene Schriften definieren */
+@font-face {
+    font-family: 'Spectral';
+    src: url('/fonts/spectral-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* Verhindert unsichtbaren Text beim Laden */
+}
+
+
+/* @font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('/fonts/PlayfairDisplay-Medium.ttf') format('ttf');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+} */
+
+/* 2. Dem Stack Theme zuweisen */
+:root {
+    /* Standard-Fließtext (Ersetzt die serifenlose Systemschrift) */
+    --font-family: 'Spectral', sans-serif;
+    --base-font-family: 'Spectral', sans-serif;
+    /* Code-Blöcke (Nur anpassen, wenn du eine Monospace-Schrift hast) */
+    --code-font-family: 'Courier New', monospace;
+}
+
+/* Falls du Überschriften (H1, H2, H3 etc.) eine andere Schrift geben willst */
+h1, h2, h3, h4, h5, h6, {
+    font-family: 'Playfair Display', var(--font-family);
+    font-weight: 300;
+}
+
+.article-title  {
+    font-family: 'Playfair Display', var(--font-family);
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 1.75em;
+}
+
+
+/* 2. Den Untertitel gezielt ansprechen und Spectral zuweisen */
+.article-subtitle {
+    font-family: 'Spectral', var(--font-family) !important;
+    font-size: 1.0em;
+}
+
+/* playfair-display-regular - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); 
+  }
+
+  /* playfair-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Playfair';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/playfair-v10-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+/* Zentriert ausschließlich das Avatarbild */
+.sidebar .site-overview .avatar {
+    margin-left: auto;
+    margin-right: auto;
+}
