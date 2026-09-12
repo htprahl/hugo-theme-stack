@@ -5,6 +5,9 @@ rssFullContent = true
 # lastmod = sort by last modified date, in descending order
 SortBy         = "default"
 
+[params.font]
+googleFonts = false
+
 [footer]
     since      = 2026
     customText = '<a href="/impressum/" style="color: var(--card-text-color-secondary); text-decoration: none;">Impressum</a> • <a href="/datenschutz/" style="color: var(--card-text-color-secondary); text-decoration: none;">Datenschutzerklärung</a>'
